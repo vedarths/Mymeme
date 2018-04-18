@@ -42,7 +42,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hW-V2-c0U" userLabel="Top Text Field">
-                                <rect key="frame" x="139" y="117" width="97" height="41.5"/>
+                                <rect key="frame" x="16" y="117" width="343" height="42"/>
                                 <attributedString key="attributedText">
                                     <fragment content="TOP">
                                         <attributes>
@@ -54,8 +54,8 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzk-xL-Kp8">
-                                <rect key="frame" x="139" y="538.5" width="97" height="21.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzk-xL-Kp8" userLabel="Bottom Text Field">
+                                <rect key="frame" x="16" y="520" width="343" height="49"/>
                                 <attributedString key="attributedText">
                                     <fragment content="BOTTOM">
                                         <attributes>
@@ -72,23 +72,23 @@
                         <constraints>
                             <constraint firstItem="a1B-YE-bmt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0o3-oc-Z1r"/>
                             <constraint firstItem="a1B-YE-bmt" firstAttribute="top" secondItem="9hW-V2-c0U" secondAttribute="bottom" constant="476" id="11q-KT-gWn"/>
-                            <constraint firstItem="a1B-YE-bmt" firstAttribute="top" secondItem="mzk-xL-Kp8" secondAttribute="bottom" constant="75" id="5hA-2z-3oo"/>
+                            <constraint firstItem="a1B-YE-bmt" firstAttribute="top" secondItem="mzk-xL-Kp8" secondAttribute="bottom" constant="66" id="5hA-2z-3oo"/>
                             <constraint firstItem="Z1v-ah-Qch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Qv-uy-YJj"/>
                             <constraint firstItem="a1B-YE-bmt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Bgr-OJ-Xkr"/>
                             <constraint firstItem="MGu-yU-Us6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DzW-Rx-Jhw"/>
                             <constraint firstItem="a1B-YE-bmt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EpE-qP-JgA"/>
                             <constraint firstItem="MGu-yU-Us6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GDi-ZW-m66"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z1v-ah-Qch" secondAttribute="bottom" id="LPz-Mm-VJh"/>
-                            <constraint firstItem="mzk-xL-Kp8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="MRa-O3-nwd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mzk-xL-Kp8" secondAttribute="trailing" constant="139" id="SAq-fE-qlx"/>
+                            <constraint firstItem="mzk-xL-Kp8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MRa-O3-nwd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mzk-xL-Kp8" secondAttribute="trailing" constant="16" id="SAq-fE-qlx"/>
                             <constraint firstItem="Z1v-ah-Qch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WdR-kU-uaC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9hW-V2-c0U" secondAttribute="trailing" constant="139" id="ha9-wd-2yq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9hW-V2-c0U" secondAttribute="trailing" constant="16" id="ha9-wd-2yq"/>
                             <constraint firstItem="9hW-V2-c0U" firstAttribute="top" secondItem="MGu-yU-Us6" secondAttribute="bottom" constant="53" id="ivf-IE-2Cj"/>
-                            <constraint firstItem="mzk-xL-Kp8" firstAttribute="top" secondItem="9hW-V2-c0U" secondAttribute="bottom" constant="380" id="l11-dY-bXC"/>
+                            <constraint firstItem="mzk-xL-Kp8" firstAttribute="top" secondItem="9hW-V2-c0U" secondAttribute="bottom" constant="361" id="l11-dY-bXC"/>
                             <constraint firstItem="MGu-yU-Us6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mec-gO-oO5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z1v-ah-Qch" secondAttribute="trailing" id="nCk-ek-olC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MGu-yU-Us6" secondAttribute="bottom" constant="603" id="oEc-GF-RSq"/>
-                            <constraint firstItem="9hW-V2-c0U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="q3I-c3-bco"/>
+                            <constraint firstItem="9hW-V2-c0U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="q3I-c3-bco"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
