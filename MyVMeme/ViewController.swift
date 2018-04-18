@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate {
 
     //outlets
     @IBOutlet weak var cancelButton: UIBarButtonItem!
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func cancelPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        setupDefaults()
     }
     @IBAction func pickFromGallery(_ sender: Any) {
         presentAnImageWithSourceType(sourceType: UIImagePickerControllerSourceType.photoLibrary)
@@ -41,8 +41,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imagePicker.delegate=self
             present(imagePicker, animated: true, completion: nil)
         }
-        
     }
+    
+    private func setupDefaults() -> Void {
+        imageView.image = nil
+        shareButton.isEnabled = false
+        topText.isHidden = true
+        bottomText.isHidden = true
+    }
+}
 
+extension ViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageView.image = image
+        dismiss(animated: true, completion: {[weak self] in
+            guard let fieldSetters = self else {
+                return
+            }
+            fieldSetters.shareButton.isEnabled = true
+            fieldSetters.cancelButton.isEnabled = true
+            fieldSetters.topText.isHidden = false
+            fieldSetters.bottomText.isHidden = false
+        })
+    }
 }
 
