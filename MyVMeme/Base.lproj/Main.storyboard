@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,6 +28,9 @@
                                     <navigationItem id="LG4-Ge-321">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="krT-0k-AEg" userLabel="Share Button">
                                             <inset key="imageInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="shareButtonClicked:" destination="BYZ-38-t0r" id="ggp-zX-CU3"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="WZU-3H-0xh" userLabel="Cancel Button">
                                             <connections>
@@ -38,13 +42,16 @@
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1B-YE-bmt" userLabel="Bottom Toolbar">
                                 <rect key="frame" x="0.0" y="635" width="375" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Z6a-Vl-MLK"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="camera" id="IBL-mM-0Ec">
                                         <connections>
                                             <action selector="pickFromCamera:" destination="BYZ-38-t0r" id="Xw7-9P-8Fg"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="121" style="plain" systemItem="fixedSpace" id="Y5X-US-2p5"/>
+                                    <barButtonItem width="274" style="plain" systemItem="fixedSpace" id="Y5X-US-2p5"/>
                                     <barButtonItem title="Gallery" width="276" id="JtB-eg-z3H">
                                         <connections>
                                             <action selector="pickFromGallery:" destination="BYZ-38-t0r" id="acE-hZ-RAf"/>
@@ -68,6 +75,9 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzk-xL-Kp8" userLabel="Bottom Text Field">
                                 <rect key="frame" x="16" y="520" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="LT2-qD-hZ7"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="BOTTOM">
                                         <attributes>
@@ -82,35 +92,34 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="a1B-YE-bmt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0o3-oc-Z1r"/>
-                            <constraint firstItem="a1B-YE-bmt" firstAttribute="top" secondItem="9hW-V2-c0U" secondAttribute="bottom" constant="476" id="11q-KT-gWn"/>
-                            <constraint firstItem="a1B-YE-bmt" firstAttribute="top" secondItem="mzk-xL-Kp8" secondAttribute="bottom" constant="66" id="5hA-2z-3oo"/>
-                            <constraint firstItem="Z1v-ah-Qch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Qv-uy-YJj"/>
-                            <constraint firstItem="a1B-YE-bmt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Bgr-OJ-Xkr"/>
-                            <constraint firstItem="MGu-yU-Us6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DzW-Rx-Jhw"/>
-                            <constraint firstItem="a1B-YE-bmt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EpE-qP-JgA"/>
-                            <constraint firstItem="MGu-yU-Us6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GDi-ZW-m66"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z1v-ah-Qch" secondAttribute="bottom" id="LPz-Mm-VJh"/>
-                            <constraint firstItem="mzk-xL-Kp8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MRa-O3-nwd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mzk-xL-Kp8" secondAttribute="trailing" constant="16" id="SAq-fE-qlx"/>
-                            <constraint firstItem="Z1v-ah-Qch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WdR-kU-uaC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9hW-V2-c0U" secondAttribute="trailing" constant="16" id="ha9-wd-2yq"/>
-                            <constraint firstItem="9hW-V2-c0U" firstAttribute="top" secondItem="MGu-yU-Us6" secondAttribute="bottom" constant="53" id="ivf-IE-2Cj"/>
-                            <constraint firstItem="mzk-xL-Kp8" firstAttribute="top" secondItem="9hW-V2-c0U" secondAttribute="bottom" constant="361" id="l11-dY-bXC"/>
-                            <constraint firstItem="MGu-yU-Us6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mec-gO-oO5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z1v-ah-Qch" secondAttribute="trailing" id="nCk-ek-olC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MGu-yU-Us6" secondAttribute="bottom" constant="603" id="oEc-GF-RSq"/>
-                            <constraint firstItem="9hW-V2-c0U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="q3I-c3-bco"/>
+                            <constraint firstItem="a1B-YE-bmt" firstAttribute="bottom" secondItem="Z1v-ah-Qch" secondAttribute="bottom" id="0yC-q8-H9m"/>
+                            <constraint firstItem="9hW-V2-c0U" firstAttribute="trailing" secondItem="mzk-xL-Kp8" secondAttribute="trailing" id="2AP-Uc-JfF"/>
+                            <constraint firstItem="9hW-V2-c0U" firstAttribute="leading" secondItem="mzk-xL-Kp8" secondAttribute="leading" id="BGi-TR-B0G"/>
+                            <constraint firstItem="a1B-YE-bmt" firstAttribute="top" secondItem="mzk-xL-Kp8" secondAttribute="bottom" constant="66" id="Cih-8a-mhy"/>
+                            <constraint firstItem="MGu-yU-Us6" firstAttribute="leading" secondItem="a1B-YE-bmt" secondAttribute="leading" id="FF6-ZI-aaT"/>
+                            <constraint firstItem="9hW-V2-c0U" firstAttribute="top" secondItem="MGu-yU-Us6" secondAttribute="bottom" constant="53" id="K4l-ha-cDx"/>
+                            <constraint firstItem="9hW-V2-c0U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OaQ-AJ-Syu"/>
+                            <constraint firstItem="a1B-YE-bmt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Q7X-ZS-YRH"/>
+                            <constraint firstItem="Z1v-ah-Qch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="S1G-YZ-FUa"/>
+                            <constraint firstItem="MGu-yU-Us6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ug4-id-JQy"/>
+                            <constraint firstItem="MGu-yU-Us6" firstAttribute="centerX" secondItem="9hW-V2-c0U" secondAttribute="centerX" id="ZAP-uf-skZ"/>
+                            <constraint firstItem="MGu-yU-Us6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fF7-nv-jIv"/>
+                            <constraint firstAttribute="trailing" secondItem="Z1v-ah-Qch" secondAttribute="trailing" id="fge-lX-wg5"/>
+                            <constraint firstItem="MGu-yU-Us6" firstAttribute="trailing" secondItem="a1B-YE-bmt" secondAttribute="trailing" id="g3H-Be-2bQ"/>
+                            <constraint firstItem="Z1v-ah-Qch" firstAttribute="leading" secondItem="a1B-YE-bmt" secondAttribute="leading" id="hF8-7J-dF4"/>
+                            <constraint firstItem="MGu-yU-Us6" firstAttribute="trailing" secondItem="Z1v-ah-Qch" secondAttribute="trailing" id="kSI-vR-4kK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bottomText" destination="mzk-xL-Kp8" id="n5w-xf-cXz"/>
+                        <outlet property="bottomToolbar" destination="a1B-YE-bmt" id="Wwk-IG-Kua"/>
                         <outlet property="cameraButton" destination="IBL-mM-0Ec" id="dbz-7r-eLU"/>
                         <outlet property="cancelButton" destination="WZU-3H-0xh" id="RhY-Ls-LvW"/>
                         <outlet property="galleryButton" destination="JtB-eg-z3H" id="5bv-zI-njN"/>
                         <outlet property="imageView" destination="Z1v-ah-Qch" id="qAW-wE-14w"/>
                         <outlet property="shareButton" destination="krT-0k-AEg" id="hDZ-Cx-FMY"/>
+                        <outlet property="topNavigationBar" destination="MGu-yU-Us6" id="4Ok-9k-lN4"/>
                         <outlet property="topText" destination="9hW-V2-c0U" id="qJ6-PP-1a2"/>
                     </connections>
                 </viewController>
