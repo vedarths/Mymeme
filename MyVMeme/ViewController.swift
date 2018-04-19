@@ -116,6 +116,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
                 self.save(memedImage: memedImage)
             }
         }
+        
+        if let popoverPresentationController = activityController.popoverPresentationController {
+            popoverPresentationController.barButtonItem = (sender as! UIBarButtonItem)
+        }
+        present(activityController, animated: true, completion: nil)
     }
     
     func save(memedImage: UIImage) {
