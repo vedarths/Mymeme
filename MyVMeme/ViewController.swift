@@ -23,6 +23,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
     
     private let defaultTopText = "TOP"
     private let defaultBottomText = "BOTTOM"
+    let memeTextAttributes:[String: Any] = [
+    NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
+    NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
+    NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+    NSAttributedStringKey.strokeWidth.rawValue: 2.1]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +36,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
     
     override func viewWillAppear(_ animated: Bool) {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        topText.defaultTextAttributes = memeTextAttributes
+        bottomText.defaultTextAttributes = memeTextAttributes
         subscribeToKeyboardNotifications()
     }
     
@@ -130,7 +137,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
                         originalImage: imageView.image!,
                         memedImage: memedImage)
         print(meme.description)
-        print("Meme was saved")
+
     }
     
     private func generateMemedImage() -> UIImage {
